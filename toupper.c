@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   toupper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:17:53 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 16:10:59 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/04 16:06:40 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/04 16:13:10 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+int toupper(int character)
 {
-    while (--n)
-        s[n] = c;
+    if (character >= 'a' && character <= 'z')
+        return (character - 32)
+    return (character)
 }

@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:17:53 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 16:10:59 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/04 15:20:14 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/04 16:13:33 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+void *memmove(void *dest, const void *src, size_t n)
 {
+    int n_saved = n;
+
+    copy = (char *) malloc((n + 1)* sizeof(char));
+    
+    copy[n] = '\0';
+    
     while (--n)
-        s[n] = c;
+        copy[n] = src[n];
+    n = n_saved;
+    while (--n)
+        dest[n] = copy[n];
+    free(copy)
 }

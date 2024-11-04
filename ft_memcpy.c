@@ -6,16 +6,12 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:55:10 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 14:58:10 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:58:57 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void *memcpy(void *dest, const void *src, size_t n)
 {
-    int i = 0;
-    while (i < n)
-    {
-        dest[i] = src[i];
-        i++;
-    }
+    while (--n)
+        dest[n] = src[n];
 }

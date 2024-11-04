@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:17:53 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 16:10:59 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/04 15:55:54 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/04 16:05:46 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+size_t strlcpy(char *dst, const char *src, size_t size)
 {
-    while (--n)
-        s[n] = c;
+    int len = ft_strlen(src);
+    while (len < size)
+    {
+        
+    }
 }
