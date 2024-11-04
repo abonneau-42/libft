@@ -6,14 +6,18 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:14:47 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 14:38:31 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:49:22 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s)
+#include "libft.h"
+
+int	ft_strlen(const char *s)
 {
-    int i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

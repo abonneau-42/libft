@@ -6,12 +6,14 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:17:53 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 16:10:59 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:57:11 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-    while (--n)
-        s[n] = c;
+	while (--n)
+		s[n] = c;
 }

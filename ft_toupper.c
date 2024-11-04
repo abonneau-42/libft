@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:11:38 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 16:13:03 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/04 16:06:40 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/04 17:49:10 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int tolower(int character)
+int	ft_toupper(int character)
 {
-    if (character >= 'a' && character <= 'z')
-        return (character + 32)
-    return (character)
+	if (character >= 'a' && character <= 'z')
+		return (character - 32);
+	return (character);
 }

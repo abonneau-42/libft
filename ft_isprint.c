@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:12:11 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 14:37:49 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:48:18 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint( int character )
+#include "libft.h"
+
+int	ft_isprint( int character )
 {
-    if (character >= 32 && character <= 127)
-        return (1);
-    return (0);
+	return (character >= 32 && character <= 127);
 }

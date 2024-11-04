@@ -6,13 +6,11 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:41:58 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 14:37:19 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:48:14 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int character);
+int	ft_isascii(int character)
 {
-    if (character < 128)
-        return (1);
-    return (0);
+	return (character < 128);
 }

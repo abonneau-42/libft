@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:28:50 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/04 14:57:00 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:47:52 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include libft.h
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(void *s, '\0', size_t n)
+	ft_memset(s, '\0', n);
 }
