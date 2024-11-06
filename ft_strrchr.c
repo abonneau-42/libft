@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:37:42 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 13:23:13 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:43:11 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*strrchr(const char *string, int searchedChar)
 	int i;
 	char	*pos;
 
+	pos = 0;
 	i = 0;
 	while (string[i])
 	{
