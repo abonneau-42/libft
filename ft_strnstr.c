@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:55:10 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 12:32:41 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/06 13:49:18 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/06 14:01:24 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char *strnstr(const char *big,	const char *little, size_t len)
 {
-	unsigned char	*str;
-	unsigned char	*str2;
-
-	str = (unsigned char *)dest;
-	str2 = (unsigned char *)src;
-	while (n--)
-		*str++ = *str2++;
-	return (dest);
+	int i;
+	int j;
+	
+	i = 0;
+	while (big[i])
+	{
+		j = 0;
+		if (big[i] == little[i])
+			while (big[i + ++j] == little[i + j])
+			{
+				
+			}
+			if (little[i + j] == '\0')
+			{
+				return (big);
+			}
+	}
 }

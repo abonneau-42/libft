@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:55:10 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 12:32:41 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/06 12:37:42 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/06 13:23:13 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*strrchr(const char *string, int searchedChar)
 {
-	unsigned char	*str;
-	unsigned char	*str2;
+	int i;
+	char	*pos;
 
-	str = (unsigned char *)dest;
-	str2 = (unsigned char *)src;
-	while (n--)
-		*str++ = *str2++;
-	return (dest);
+	i = 0;
+	while (string[i])
+	{
+		if (string[i] == searchedChar)
+			pos = &string[i];
+		i++;
+	}
+	return (pos);
 }

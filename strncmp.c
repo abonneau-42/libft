@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:55:10 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 12:32:41 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/06 13:24:59 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/06 13:48:31 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	strncmp(const char *first, const char *second, size_t length)
 {
-	unsigned char	*str;
-	unsigned char	*str2;
+	int	i;
 
-	str = (unsigned char *)dest;
-	str2 = (unsigned char *)src;
-	while (n--)
-		*str++ = *str2++;
-	return (dest);
+	i = -1;
+	while ((first[++i] || second[i]) && i < length)
+		if (first[i] != second[i])
+			return (first[i] - second[i]);
+	return (0);
 }
