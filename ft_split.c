@@ -10,91 +10,66 @@
 /*									      */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_include(char str, char *chars)
+static int	count_words(const char *str, char c)
 {
 	int	i;
+	int	trigger;
 
-	i = -1;
-	while (chars[++i])
-		if (str == chars[i])
-			return (1);
-	return (0);
-}
-
-int	ft_countword(char *str, char *chars)
-{
-	int	count_word;
-
-	count_word = 0;
+	i = 0;
+	trigger = 0;
 	while (*str)
 	{
-		if (!ft_include(*str, chars))
+		if (*str != c && trigger == 0)
 		{
-			while (*str && !ft_include(*str, chars))
-				str++;
-			count_word++;
+			trigger = 1;
+			i++;
 		}
+		else if (*str == c)
+			trigger = 0;
 		str++;
 	}
-	return (count_word);
+	return (i);
 }
 
-int	len_to_delimiter(char *str, char *chars)
+static char	*word_dup(const char *str, int start, int finish)
 {
-	int	len;
+	char	*word;
+	int		i;
 
-	len = -1;
-	while (str[++len])
-		if (ft_include(str[len], chars))
-			return (len);
-	return (len);
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	int		j;
-	int		k;
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
 
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
+		return (0);
+	i = 0;
 	j = 0;
-	tab = malloc((ft_countword(str, charset) + 1) * sizeof(char *));
-	if (!tab)
-		return (NULL);
-	str--;
-	while (*(++str))
+	index = -1;
+	while (i <= ft_strlen(s))
 	{
-		if (!ft_include(*str, charset))
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			tab[j] = malloc((len_to_delimiter(str, charset) + 1)
-					* sizeof(char));
-			if (!tab[j])
-				return (NULL);
-			k = 0;
-			while (*str && !ft_include(*str, charset))
-				tab[j][k++] = *(str++);
-			tab[j++][k] = '\0';
+			split[j++] = word_dup(s, index, i);
+			index = -1;
 		}
+		i++;
 	}
-	tab[j] = NULL;
-	return (tab);
+	split[j] = 0;
+	return (split);
 }
-
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	char	**tab;
-	(void)argc;
-
-	tab = ft_split(argv[1], argv[2]);
-	while (*tab)
-	{
-		printf("%s\n", *tab);
-		free(*tab);
-		tab++;
-	}
-}
-*/

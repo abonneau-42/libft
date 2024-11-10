@@ -12,18 +12,16 @@
 
 #include "libft.h"
 
-char	*strrchr(const char *string, int searchedChar)
+char	*ft_strrchr(const char *string, int searchedChar)
 {
-	int i;
-	char	*pos;
+	int	i;
 
-	pos = 0;
-	i = 0;
-	while (string[i])
+	i = ft_strlen(string);
+	while (i >= 0)
 	{
 		if (string[i] == searchedChar)
-			pos = &string[i];
-		i++;
+			return ((char *)&string[i]);
+		i--;
 	}
-	return (pos);
+	return (0);
 }

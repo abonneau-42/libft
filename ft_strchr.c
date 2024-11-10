@@ -10,14 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *string, int searchedChar)
+char	*ft_strchr(const char *string, int searchedChar)
 {
-	while (*string)
-	{
-		if (*string == searchedChar)
-			return ((char *) string);
-		string++;
-	}
+	int	i;
 
+	i = 0;
+	while (string[i])
+	{
+		if (string[i] == searchedChar)
+			return ((char *)&string[i]);
+		i++;
+	}
+	if (searchedChar == '\0')
+		return ((char *)&string[i]);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:03:47 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 15:20:53 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:45:31 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,23 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
-void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memset(void *ptr, int c, size_t n);
 
-char	**ft_split(char *str, char *charset);
+void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 
-char	*strchr(const char *string, int searchedChar);
+char	**ft_split(char const *s, char c);
+
+char	*ft_strchr(const char *string, int searchedChar);
+
+char	*ft_strrchr(const char *string, int searchedChar);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
-size_t	strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 
-int		ft_strncmp(const char *first, const char *second, size_t length);
-
-char	*strnstr(const char *big, const char *little, size_t len);
-
-char	*strrchr(const char *string, int searchedChar);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int		ft_tolower(int character);
 
@@ -56,5 +56,13 @@ int		ft_isalnum(int character);
 void	ft_bzero(void *s, size_t n);
 
 int		ft_atoi(const char *nptr);
+
+char	*ft_strnstr(const char *str, const char *pattern, size_t len);
+
+int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
+
+void	*ft_calloc(size_t elementCount, size_t elementSize);
+
+char	*ft_strdup(const char *string);
 
 #endif
