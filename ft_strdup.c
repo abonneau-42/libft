@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:43:02 by azall             #+#    #+#             */
-/*   Updated: 2024/11/10 17:49:46 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/11 17:23:18 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 char	*ft_strdup(const char *string)
 {
 	char	*newstr;
-	int		i;
+	size_t	i;
 
-	i = 0;
-	while (string[i])
-		i++;
+	i = ft_strlen(string);
 	newstr = malloc(i + 1);
 	if (!newstr)
 		return (0);

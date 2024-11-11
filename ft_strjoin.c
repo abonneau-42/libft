@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 11:49:14 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/11 17:58:23 by azall            ###   ########.fr       */
+/*   Created: 2024/11/11 16:25:04 by azall             #+#    #+#             */
+/*   Updated: 2024/11/11 17:23:05 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *string, int searchedChar)
-{
-	int	i;
+#include "libft.h"
 
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (string[i])
+	j = 0;
+	while (s1[i])
 	{
-		if (string[i] == searchedChar)
-			return ((char *)&string[i]);
+		str[i] = s1[i];
 		i++;
 	}
-	if (searchedChar == '\0')
-		return ((char *)&string[i]);
-	return (0);
+	while (s2[j])
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }

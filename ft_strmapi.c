@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 11:49:14 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/11 17:58:23 by azall            ###   ########.fr       */
+/*   Created: 2024/11/11 17:29:55 by azall             #+#    #+#             */
+/*   Updated: 2024/11/11 17:35:12 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *string, int searchedChar)
-{
-	int	i;
+#include "libft.h"
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*str;
+	size_t	len;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (string[i])
+	while (i < len)
 	{
-		if (string[i] == searchedChar)
-			return ((char *)&string[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	if (searchedChar == '\0')
-		return ((char *)&string[i]);
-	return (0);
+	str[i] = '\0';
+	return (str);
 }
