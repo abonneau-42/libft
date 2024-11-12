@@ -6,22 +6,22 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:49:14 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/11 17:58:23 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/12 19:25:10 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *string, int searchedChar)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (string[i])
+	while (s[i])
 	{
-		if (string[i] == searchedChar)
-			return ((char *)&string[i]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i++;
 	}
-	if (searchedChar == '\0')
-		return ((char *)&string[i]);
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
 	return (0);
 }

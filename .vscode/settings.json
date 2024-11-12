@@ -2,6 +2,12 @@
 	"functionHeaderExtension.headerFilePath": "/home/abonneau/Documents/projects/libft/libft.h",
 	"files.associations": {
 		"string.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"stdio.h": "c",
+		"array": "c",
+		"string_view": "c",
+		"format": "c",
+		"initializer_list": "c",
+		"span": "c"
 	}
 }

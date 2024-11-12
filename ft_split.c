@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+static void	*free_all(char **split, int j)
+{
+	while (j >= 0)
+		free(split[j--]);
+	free(split);
+	return (NULL);
+}
+
 static int	count_words(const char *str, char c)
 {
 	int	i;
@@ -40,6 +48,8 @@ static char	*word_dup(const char *str, int start, int finish)
 
 	i = 0;
 	word = malloc((finish - start + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
 	while (start < finish)
 		word[i++] = str[start++];
 	word[i] = '\0';
@@ -66,6 +76,8 @@ char	**ft_split(char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			split[j++] = word_dup(s, index, i);
+			if (!split[j])
+				return (free_all(split, j - 2));
 			index = -1;
 		}
 		i++;

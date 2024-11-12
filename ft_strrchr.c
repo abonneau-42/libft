@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:37:42 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 14:43:11 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:24:26 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *string, int searchedChar)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(string);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (string[i] == searchedChar)
-			return ((char *)&string[i]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (0);

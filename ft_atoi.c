@@ -3,38 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:30:57 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/06 15:04:54 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:06:19 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_isspace(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
+
+static int	get_sign(const char *nptr, int *i)
+{
+	if (nptr[*i] == '-')
+	{
+		(*i)++;
+		return (-1);
+	}
+	else if (nptr[*i] == '+')
+		(*i)++;
+	return (1);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int				i;
+	int				sign;
+	long			result;
 
 	i = 0;
-	sign = 1;
 	result = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (nptr[i] == '+')
-		i++;
+	sign = get_sign(nptr, &i);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		result = result * 10 + nptr[i] - '0';
-		i++;
+		if (result > 922337203685477580
+			|| (result == 922337203685477580 && nptr[i] - '0' > 7))
+		{
+			if (sign == 1)
+				return (-1);
+			return (0);
+		}
+		result = result * 10 + nptr[i++] - '0';
 	}
 	return (result * sign);
 }
