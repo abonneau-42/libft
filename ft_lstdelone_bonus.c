@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 17:43:02 by azall             #+#    #+#             */
-/*   Updated: 2024/11/13 17:26:55 by azall            ###   ########.fr       */
+/*   Created: 2024/11/13 19:32:28 by azall             #+#    #+#             */
+/*   Updated: 2024/11/13 20:50:08 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *string)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	char	*newstr;
-	size_t	i;
-
-	i = ft_strlen(string);
-	newstr = malloc(i + 1);
-	if (!newstr)
-		return (0);
-	i = 0;
-	while (string[i])
-	{
-		newstr[i] = string[i];
-		i++;
-	}
-	newstr[i] = '\0';
-	return (newstr);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }

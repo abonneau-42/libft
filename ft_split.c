@@ -12,76 +12,95 @@
 
 #include "libft.h"
 
-static void	*free_all(char **split, int j)
+static void	*free_tab(char **tab, int j)
 {
 	while (j >= 0)
-		free(split[j--]);
-	free(split);
+		free(tab[j--]);
+	free(tab);
 	return (NULL);
 }
 
-static int	count_words(const char *str, char c)
+static int	ft_count_words(const char *s, char c)
 {
-	int	i;
-	int	trigger;
+	int	count;
 
-	i = 0;
-	trigger = 0;
-	while (*str)
+	count = 0;
+	while (*s)
 	{
-		if (*str != c && trigger == 0)
+		if (*s != c)
 		{
-			trigger = 1;
-			i++;
+			count++;
+			while (*s && *s != c)
+				s++;
 		}
-		else if (*str == c)
-			trigger = 0;
-		str++;
+		else
+			s++;
 	}
-	return (i);
+	return (count);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+static char	*ft_strndup(const char *s, size_t n)
 {
-	char	*word;
+	char	*str;
+
+	str = (char *)malloc(n + 1);
+	if (!str)
+		return (NULL);
+	str[n] = '\0';
+	while (n--)
+		str[n] = s[n];
+	return (str);
+}
+
+static char	*get_word(const char *s, char c, size_t *k)
+{
+	*k = 0;
+	while (s[*k] && s[*k] != c)
+		(*k)++;
+	return (ft_strndup(s, *k));
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**tab;
+	int		i;
+	size_t	j;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	tab = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!tab)
+		return (NULL);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			tab[i] = get_word(s, c, &j);
+			if (!tab[i])
+				return (free_tab(tab, i));
+			i++;
+			s += j;
+		}
+		else
+			s++;
+	}
+	tab[i] = NULL;
+	return (tab);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	**tab;
 	int		i;
 
+	tab = ft_split("Hello World", ' ');
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	if (!word)
-		return (NULL);
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	size_t	i;
-	size_t	j;
-	int		index;
-	char	**split;
-
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !split)
-		return (0);
-	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
+	while (tab[i])
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-			split[j++] = word_dup(s, index, i);
-			if (!split[j])
-				return (free_all(split, j - 2));
-			index = -1;
-		}
+		// printf("%s\n", tab[i]);
 		i++;
 	}
-	split[j] = 0;
-	return (split);
-}
+	return (0);
+}*/
