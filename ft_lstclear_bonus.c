@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 20:23:14 by azall             #+#    #+#             */
-/*   Updated: 2024/11/13 20:38:30 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 18:03:05 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (!del)
 		return ;
-	while (lst)
+	while (*lst)
 	{
 		tmp_lst = (*lst)->next;
-		ft_lstdelone(lst, del);
+		ft_lstdelone(*lst, del);
 		*lst = tmp_lst;
 	}
 }

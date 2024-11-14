@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:38:39 by azall             #+#    #+#             */
-/*   Updated: 2024/11/12 19:16:24 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 18:00:57 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_calloc(size_t size, size_t nmemb)
 	size_t	total_size;
 
 	total_size = size * nmemb;
-	if (nmemb && ((total_size / nmemb) != size))
+	if (!nmemb)
+		return (malloc(0));
+	if ((total_size / nmemb) != size)
 		return (NULL);
 	ptr = malloc(total_size);
 	if (!ptr)

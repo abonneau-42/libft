@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:30:57 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/12 19:06:19 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 15:41:36 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ int	ft_atoi(const char *nptr)
 	sign = get_sign(nptr, &i);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (result > 922337203685477580
-			|| (result == 922337203685477580 && nptr[i] - '0' > 7))
+		if ((result * 10 + nptr[i] - '0') / 10 != result)
 		{
 			if (sign == 1)
 				return (-1);

@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:03:47 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/13 20:41:48 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 18:04:09 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,17 @@ void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 t_list	*ft_lstnew(void *content);
 
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
-void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 int		ft_lstsize(t_list *lst);
 
@@ -102,10 +108,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

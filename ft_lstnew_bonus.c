@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 18:15:26 by azall             #+#    #+#             */
-/*   Updated: 2024/11/13 18:18:13 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 18:03:30 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new;
+	t_list	*new;
 
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
