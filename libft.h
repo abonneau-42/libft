@@ -6,7 +6,7 @@
 /*   By: azall <azall@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:03:47 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/14 18:04:09 by azall            ###   ########.fr       */
+/*   Updated: 2024/11/14 18:22:42 by azall            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-/* FUNCTIONS */
 
 int		ft_isalpha(int character);
 
