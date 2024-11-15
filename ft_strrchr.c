@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:37:42 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:38 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:06:49 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }

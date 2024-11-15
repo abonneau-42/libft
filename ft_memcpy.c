@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:55:10 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:09 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:49:18 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*str2;
 
 	if (!dest && !src)
-		return (0);
+		return (NULL);
 	str = (unsigned char *)dest;
 	str2 = (unsigned char *)src;
 	while (n--)

@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:49:18 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:37 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:06:36 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strnstr(const char *str, const char *pattern, size_t len)
 			return ((char *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

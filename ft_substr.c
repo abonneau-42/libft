@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 16:11:41 by azall             #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:42 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/15 13:06:37 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/15 14:00:31 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (i < len)
 	{
 		str[i] = s[start + i];
 		i++;

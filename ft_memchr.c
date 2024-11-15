@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:53:55 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:07 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:03:52 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
