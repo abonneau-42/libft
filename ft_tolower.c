@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:11:38 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:43 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:17:03 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int character)
+int	ft_tolower(int c)
 {
-	if (character >= 'A' && character <= 'Z')
-		return (character + 32);
-	return (character);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

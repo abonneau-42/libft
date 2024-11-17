@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:03:40 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 14:02:21 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:27:23 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t size, size_t nmemb)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	total_size;

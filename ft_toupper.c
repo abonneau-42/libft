@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:06:40 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:48:44 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:18:19 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int character)
+int	ft_toupper(int c)
 {
-	if (character >= 'a' && character <= 'z')
-		return (character - 32);
-	return (character);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

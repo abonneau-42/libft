@@ -6,13 +6,13 @@
 /*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:02:38 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 12:47:53 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:14:12 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int character)
+int	ft_isdigit(int c)
 {
-	return (character >= '0' && character <= '9');
+	return (c >= '0' && c <= '9');
 }
