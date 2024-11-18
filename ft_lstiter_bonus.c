@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:35:00 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/18 15:35:01 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:28:34 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!f || !lst)
+	if (!f)
 		return ;
 	while (lst)
 	{

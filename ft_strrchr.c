@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:27:11 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/18 15:27:13 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:17:45 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{

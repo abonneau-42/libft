@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:34:31 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/18 15:34:32 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:10:07 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	while (s1[start] && ft_is_include(s1[start], set))

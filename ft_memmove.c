@@ -6,7 +6,7 @@
 /*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:28:46 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/18 15:28:47 by abonneau         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:47:59 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*d;
 	unsigned char	*s;
 
-	d = (unsigned char *)dest;
+	d = dest;
 	s = (unsigned char *)src;
 	if (s < d)
 	{
