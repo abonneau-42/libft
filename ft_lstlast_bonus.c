@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 13:04:28 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 13:04:33 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/18 15:32:55 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/18 15:32:57 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

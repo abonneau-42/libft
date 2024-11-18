@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 13:04:54 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 13:04:56 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/18 15:30:09 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/18 15:30:10 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

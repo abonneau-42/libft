@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+         #
+#    By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/15 13:06:53 by abonneau          #+#    #+#              #
-#    Updated: 2024/11/15 13:06:54 by abonneau         ###   ########.fr        #
+#    Updated: 2024/11/18 15:35:57 by abonneau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

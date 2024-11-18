@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonneau <abonneau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abonneau <abonneau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 13:04:12 by abonneau          #+#    #+#             */
-/*   Updated: 2024/11/15 13:04:14 by abonneau         ###   ########.fr       */
+/*   Created: 2024/11/18 15:32:42 by abonneau          #+#    #+#             */
+/*   Updated: 2024/11/18 15:32:44 by abonneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
